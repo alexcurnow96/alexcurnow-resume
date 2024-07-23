@@ -134,6 +134,11 @@
         margin: 0;
     }
 
+    .main-links {
+        text-decoration: none;
+        color:#000000;
+    }
+
     .nav-left {
         height: 100vh;
         flex-direction: column;
@@ -169,6 +174,7 @@
     .nav-copyright {
         position: absolute;
         bottom: 3vh;
+        letter-spacing: 1px;
     }
 
     .nav-line {
