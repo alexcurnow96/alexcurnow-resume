@@ -14,24 +14,26 @@
         height: 100vh;
 }
 
+
+/* -------------------------------------------- LEFT NAVIGATION BAR --------------------------------------------*/
+
 .nav-left {
     height: 100vh;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    padding-left: 15vw;
+    align-items: end;
     display: flex;
-    width: 6%;
-    padding-top: 5%;
+    width: 12%;
+    padding-top: 9%;
     padding-bottom: 30px;
     position: fixed;
+    top: 5%;
 }
 
 .nav-left-item {
     flex: 0 auto;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     padding-left: 20px;
     padding-right: 15px;
-    transform: rotate(-90deg);
 }
 
 .nav-left-link {
@@ -40,14 +42,15 @@
     text-align: center;
     text-transform: uppercase;
     border: 0;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 500;
     font-family: 'Cinzel', sans-serif;
     color: #000000;
+    transition: color 0.3s ease-in-out;
 }
 
 .nav-copyright {
-    position: absolute;
+    align-items: flex-end;
     bottom: 3vh;
 }
 
@@ -59,17 +62,48 @@
     margin-bottom: 88px;
 }
 
-.section-left {
-    position: absolute;
-    margin-top: 50px;
-    margin-left: 25px;
+
+/* -------------------------------------------- MAIN NAV LINKS --------------------------------------------*/
+
+.navbar {
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: space-between;
+    top: 10px;
+    background-color: #d1c7bd;
+    background-size: cover;
+    padding: 10px 10%;
+    width: 100%;
 }
 
-.section-right {
-    position: absolute;
-    margin-top: 18vh;
-    margin-left: 20px;
+.nav-list {
+    display: flex;
+    list-style: none;
 }
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list li:last-child {
+    margin-right: 0;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+    color:#000000;
+    font-family: 'Cinzel', sans-serif;
+}
+
+.nav-list li a:hover {
+    color: #fff;
+}
+
+
+
 
 .header {
     font-family: 'Raleway', sans-serif;
@@ -83,14 +117,6 @@
     font-size: 20px;
 }  
 
-.section-right h2 {
-    font-family: 'Cinzel', sans-serif;
-    font-weight: 400;
-    font-size: 55px;
-    padding: 0;
-    margin: 0;
-}
-
 
 
 @media only screen and (min-width: 768px) {
@@ -103,17 +129,6 @@
         width: 100vw;
     }
     
-    .section-left {
-        position: absolute;
-        right: 60%;
-        top: 50%;
-    }
-    
-    .section-right {
-        position: absolute;
-        left: 45%;
-    }
-    
     .header {
         font-family: 'Raleway', sans-serif;
         font-weight: 200;
@@ -123,26 +138,53 @@
     .description {
         font-family: 'Raleway', sans-serif;
         font-weight: 300;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .description a {
         text-decoration: none;
         color: #000000;
     }
-    
-    .section-right h2 {
-        font-family: 'Cinzel', sans-serif;
-        font-weight: 200;
-        font-size: 100px;
-        padding: 0;
-        margin: 0;
-    }
 
-    .main-links {
-        text-decoration: none;
-        color:#000000;
-    }
+/* -------------------------------------------- NAVBAR TOP --------------------------------------------*/
+
+.navbar {
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: space-between;
+    top: 10px;
+    background-color: #d1c7bd;
+    background-size: cover;
+    padding: 10px 10%;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list li:last-child {
+    margin-right: 0;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    font-size: 25px;
+    transition: color 0.3s ease-in-out;
+    color:#000000;
+    font-family: 'Cinzel', sans-serif;
+}
+
+.nav-list li a:hover {
+    color: #fff;
+}
+
+/* -------------------------------------------- NAVBAR LEFT --------------------------------------------*/
 
     .nav-left {
         height: 100vh;
@@ -150,10 +192,11 @@
         justify-content: flex-start;
         align-items: center;
         display: flex;
-        width: 6%;
-        padding-top: 5%;
+        width: 5%;
+        padding-top: 6%;
         padding-bottom: 30px;
         position: fixed;
+        padding-left: 4vw;
     }
 
     .nav-left-item {
@@ -189,24 +232,8 @@
         margin-bottom: 2px;
     }
 
-    .nav-top {
-        flex-direction: row;
-        overflow: hidden;
-    }
-
-    .nav-top-link {
-        float: right;
-        text-decoration: none;
-        text-align: center;
-        padding: 14px 16px;
-        font-family: 'Cinzel', sans-serif;
-        color: #000000;
-    }
-
-    .right-link {
-        margin-right: 20px;
-    }
-
+/* -------------------------------------------- ABOUT PAGE --------------------------------------------*/
+    
     .hero-image {
         background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
         height: 100%;
@@ -285,4 +312,91 @@
     }
     
 
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .navbar {
+        display: flex;
+        position: sticky;
+        align-items: center;
+        justify-content: space-between;
+        top: 20px;
+        background-color: #d1c7bd;
+        background-size: cover;
+        padding: 10px 10%;
+    }
+    
+    .nav-list {
+        display: flex;
+        list-style: none;
+    }
+    
+    .nav-list li {
+        margin-right: 20px;
+    }
+    
+    .nav-list li:last-child {
+        margin-right: 0;
+    }
+    
+    .nav-list li a {
+        text-decoration: none;
+        font-size: 30px;
+        transition: color 0.3s ease-in-out;
+        color:#000000;
+        font-family: 'Cinzel', sans-serif;
+    }
+    
+    .nav-list li a:hover {
+        color: #fff;
+    }
+
+
+    
+    .nav-left {
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        display: flex;
+        width: 5%;
+        padding-top: 6%;
+        padding-bottom: 30px;
+        position: fixed;
+        padding-left: 3vw;
+    }
+
+    .nav-left-item {
+        flex: 0 auto;
+        margin-bottom: 40px;
+        padding-left: 20px;
+        padding-right: 15px;
+        transform: rotate(-90deg);
+    }
+
+    .nav-left-link {
+        text-decoration: none;
+        letter-spacing: 5px;
+        text-align: center;
+        text-transform: uppercase;
+        border: 0;
+        font-size: 1.5rem;
+        font-weight: 500;
+        font-family: 'Cinzel', sans-serif;
+        color: #000000;
+    }
+
+    .nav-copyright {
+        position: absolute;
+        bottom: 3vh;
+        letter-spacing: 1px;
+    }
+
+    .nav-line {
+        width: 1px;
+        background-color: #000000;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
 }
